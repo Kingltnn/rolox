@@ -56,41 +56,9 @@ Converted["_TextLabel"].Position = UDim2.new(0.00596883474, 0, 0, 0)
 Converted["_TextLabel"].Size = UDim2.new(0, 239, 0, 37)
 Converted["_TextLabel"].Parent = Converted["_Frame"]
 
-Converted["_UIStroke"].Thickness = 1.5
-Converted["_UIStroke"].Parent = Converted["_TextLabel"]
 
-Converted["_Frame1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_Frame1"].BorderSizePixel = 2
-Converted["_Frame1"].Position = UDim2.new(0.0959244519, 0, 0.284897029, 0)
-Converted["_Frame1"].Size = UDim2.new(0, 240, 0, 31)
-Converted["_Frame1"].Parent = Converted["_ScreenGui"]
 
-Converted["_UICorner1"].CornerRadius = UDim.new(0, 10)
-Converted["_UICorner1"].Parent = Converted["_Frame1"]
 
-Converted["_TextLabel1"].Font = Enum.Font.SourceSansBold
-Converted["_TextLabel1"].Text = "Gem Tracker"
-Converted["_TextLabel1"].TextColor3 = Color3.fromRGB(111.00000858306885, 229.00001674890518, 255)
-Converted["_TextLabel1"].TextSize = 29
-Converted["_TextLabel1"].TextStrokeTransparency = 0
-Converted["_TextLabel1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_TextLabel1"].BackgroundTransparency = 1
-Converted["_TextLabel1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_TextLabel1"].BorderMode = Enum.BorderMode.Middle
-Converted["_TextLabel1"].BorderSizePixel = 9
-Converted["_TextLabel1"].Position = UDim2.new(0.0178874973, 0, 0, 0)
-Converted["_TextLabel1"].Size = UDim2.new(0, 234, 0, 30)
-Converted["_TextLabel1"].Parent = Converted["_Frame1"]
-
-Converted["_UIStroke1"].Thickness = 2
-Converted["_UIStroke1"].Parent = Converted["_TextLabel1"]
-
-Converted["_ImageLabel"].Image = "http://www.roblox.com/asset/?id=5556687871"
-Converted["_ImageLabel"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_ImageLabel"].BackgroundTransparency = 1
-Converted["_ImageLabel"].Position = UDim2.new(0.773832202, 0, -0.351350844, 0)
-Converted["_ImageLabel"].Size = UDim2.new(0, 53, 0, 53)
-Converted["_ImageLabel"].Parent = Converted["_Frame1"]
 
 local GemCount = LibrarySave.Get().Diamonds
 local LastGems = 0
