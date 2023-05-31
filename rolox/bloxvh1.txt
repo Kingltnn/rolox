@@ -1,1 +1,3 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Kingltnn/rolox/main/rolox/bloxVH.lua"))()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kingltnn/rolox/main/rolox/asd.lua"))()
