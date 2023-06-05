@@ -1,6 +1,6 @@
 while not game:IsLoaded() do wait(1) end
 wait(35)
-targetmulti = 5 -- If The Multiplier Of A Coin Is Higher Or Equal To This It Will Break It
+targetmulti = 1 -- If The Multiplier Of A Coin Is Higher Or Equal To This It Will Break It
 breakgiantchest = true -- Weather To Break The Giant Mine Chest Even If Its Below The Multi
 breakbigchests = true -- Weather To Break The Big Mine Chests Even If They Are Below The Multi
 WEBHOOK = "https://discord.com/api/webhooks/1111841859673800754/ywUAXmUxGext8pLdUuJdPfss-qk5G9xfWfw2GO-2bugOCokFlCtj6KVtz3tPEyKiOW3h" -- Webhook
