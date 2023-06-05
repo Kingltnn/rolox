@@ -1,5 +1,5 @@
 while not game:IsLoaded() do wait(1) end
-wait(35)
+wait(5)
 targetmulti = 5 -- If The Multiplier Of A Coin Is Higher Or Equal To This It Will Break It
 breakgiantchest = true -- Weather To Break The Giant Mine Chest Even If Its Below The Multi
 breakbigchests = true -- Weather To Break The Big Mine Chests Even If They Are Below The Multi
@@ -175,7 +175,7 @@ for i, v in pairs(AllNeededCoins) do
 		if not f then break end
 	end
 end
-wait(5)
+wait(30)
 local EndingGems = Library.Save.Get().Diamonds
 GemsEarned = EndingGems - StartingGems
 WH()
