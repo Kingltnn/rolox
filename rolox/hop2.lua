@@ -29,7 +29,7 @@ local function serverHop()
         local data = game:GetService("HttpService"):JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/"..game.PlaceId.."/servers/Public?sortOrder=Asc&excludeFullGames=true&limit=100"))
         local bestserver
         for i,v in pairs(data.data) do
-          if (tonumber(v.playing) < 12) and (tonumber(v.playing) > 1) then
+          if (tonumber(v.playing) < 12) and (tonumber(v.playing) > 3 ) then
             bestserver = v.id
           end
         end
