@@ -1,29 +1,8 @@
---[[
--- THIS SCRIPT HAS BEEN CODED BY RAFA (discord.gg/MilkUp)
--- DON'T BE A STUPID SKIDDIE THAT STEAL PEOPLE CODE AND PUT ON A SHIT PAID (or "watch ad to get key") SCRIPT
--- hi Project WD please don't steal my code again thx
-
--- For Preston:
--- Sorry for any incovenience I don't make any malicous script like mail/bank stealers, trade scam and this shit, just auto-farm and QoL scripts, feel free to use this repo to fix any vulnerability on your game
---]]
-
--- Join us at 
--- discord.gg/MilkUp
-
-
-
-
---[[
--- TODO LIST:
--- • Huge notifier on Discord Webhook (its ez but I'm lazy)
--- • Auto quest
--- • Improve Bank Index with "Auto buy storage upgrades" (+ withdraw needed diamonds from bank)
---]]
-
 
 -- Important Variables
 local SCRIPT_NAME = "KingLTN"
-local SCRIPT_VERSION = "v0.4" -- Hey rafa remember to change it before updating lmao
+local SCRIPT_VERSION = "v0.1"
+
 
 -- Detect if the script has executed by AutoExec
 local AutoExecuted = false
@@ -518,12 +497,12 @@ if game.PlaceId == 6284583030 or game.PlaceId == 10321372166 or game.PlaceId == 
 	
 
 	local Window = Rayfield:CreateWindow({
-	   Name = "Pet Simulator GUI | by Rafa ",
+	   Name = "Pet Simulator X KingLTN | by KingLTN ",
 	   LoadingTitle = SCRIPT_NAME .. " " .. SCRIPT_VERSION,
-	   LoadingSubtitle = "by Rafa",
+	   LoadingSubtitle = "by KingLTN",
 	   ConfigurationSaving = {
 		  Enabled = true,
-		  FolderName = "Rafa",
+		  FolderName = "KingLTN",
 		  FileName = "PetSimulatorX_" .. tostring(LocalPlayer.UserId)
 	   },
 	   OldTabLayout = true
@@ -583,7 +562,7 @@ if game.PlaceId == 6284583030 or game.PlaceId == 10321372166 or game.PlaceId == 
 	
 	
 	
-	Library.ChatMsg.New(string.format("Hello, %s! You're running %s %s", LocalPlayer.DisplayName, SCRIPT_NAME, SCRIPT_VERSION), Color3.fromRGB(175, 70, 245))
+	Library.ChatMsg.New(string.format("Hello, %s! You're running %s %s | donate me: kenchuboy2k", LocalPlayer.DisplayName, SCRIPT_NAME, SCRIPT_VERSION), Color3.fromRGB(175, 70, 245))
 	
 	--local mainTab = Window:CreateTab("Main", "12434808810")
 	
@@ -599,7 +578,7 @@ if game.PlaceId == 6284583030 or game.PlaceId == 10321372166 or game.PlaceId == 
 	
 	
 	local autoFarmTab = Window:CreateTab("Farm", "13075651575", true)
-	local stats = autoFarmTab:CreateParagraph({Title = "Hello, <b><font color=\"#2B699F\">" .. LocalPlayer.DisplayName .. "</font></b>!", Content = "Thanks for using my script! - Rafa\nMake sure to join us at <b><font color=\"#2B699F\">discord.gg/MilkUp</font></b>"})
+	local stats = autoFarmTab:CreateParagraph({Title = "Hello, <b><font color=\"#2B699F\">" .. LocalPlayer.DisplayName .. "</font></b>!", Content = "Thanks for using my script! - KingLTN\nMake sure to join us at <b><font color=\"#2B699F\">discord.gg/MilkUp</font></b>"})
 	local autoFarmSection = autoFarmTab:CreateSection("Auto Farm", false, false, "7785988164")
 	local enableAutoFarm = false
 	autoFarmTab:CreateToggle({
