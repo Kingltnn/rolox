@@ -1,10 +1,16 @@
 while not game:IsLoaded() do wait(1) end
-wait(35)
-targetmulti = 5 -- If The Multiplier Of A Coin Is Higher Or Equal To This It Will Break It
+wait(3)
+targetmulti = 1 -- If The Multiplier Of A Coin Is Higher Or Equal To This It Will Break It
 breakgiantchest = true -- Weather To Break The Giant Mine Chest Even If Its Below The Multi
 breakbigchests = true -- Weather To Break The Big Mine Chests Even If They Are Below The Multi
-WEBHOOK = "https://discord.com/api/webhooks/1114053019970064384/sJxJvLLiVCtmCcKCIFDnPI8bv_fN4LAGLEPf8mqyugzoj_MVEUfSjviYFiu6pfIVuWfM" -- Webhook
-
+WEBHOOK = "https://discord.com/api/webhooks/1111841859673800754/ywUAXmUxGext8pLdUuJdPfss-qk5G9xfWfw2GO-2bugOCokFlCtj6KVtz3tPEyKiOW3h" -- Webhook
+Settings = {
+["Webhooks"] = {
+    ["Time Frame Webhook"] = "https://discord.com/api/webhooks/1114124503405039660/MBoma7dEqXYZUPHlTsVo1nMw5nLQLXN7IvumhBCqU36jenoyieHktmt8IT45gHr2leF6",
+    ["Timeframe"] = 60 -- Seconds
+},
+}
+local TimeElapsed = 0
 local oldJob = game.JobId
 
 local v1 = require(game.ReplicatedStorage:WaitForChild("Framework"):WaitForChild("Library"));
@@ -29,7 +35,7 @@ local function serverHop()
         local data = game:GetService("HttpService"):JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/"..game.PlaceId.."/servers/Public?sortOrder=Asc&excludeFullGames=true&limit=100"))
         local bestserver
         for i,v in pairs(data.data) do
-          if (tonumber(v.playing) < 12) and (tonumber(v.playing) > 1) then
+          if (tonumber(v.playing) < 12) and (tonumber(v.playing) > 1 ) then
             bestserver = v.id
           end
         end
@@ -84,13 +90,13 @@ function WH()
             ["content"] = "",
             ["embeds"] = {
 			    {
-			      ["title"] = "Server Hop Stat Update",
+			      ["title"] = "Server Hop for KingLTN",
 			      ["description"] = "Successfully Broke Everything In Server. Hopping To New Server!",
 			      ["color"] = 5814783,
 			      ["fields"] = {
 			        {
 			          ["name"] = "Stats",
-			          ["value"] = ":clock1: **Time Taken:** ``"..TimeElapsed.."s``\n:gem: **Gems Earned:** ``"..add_suffix(GemsEarned).."``\n:map: **Farming:** ``"..AREATOCHECK.."``"
+			          ["value"] = ":clock1: **Time Taken:** ``"..TimeElapsed.."s``\n:gem: **Gems Earned:** ``"..add_suffix(GemsEarned).."``\n:gem: **Total Gems Earned:** ``" .. add_suffix(TotalGemsEarned) .. "``\n:map: **Farming:** ``"..AREATOCHECK.."``"
 			        }
 			      },
 			      ["author"] = {
@@ -140,6 +146,7 @@ for i, v in pairs(AllC) do
 	end
 end
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9043.19141, -14.3321552, 2424.63647, -0.938255966, 7.68024719e-08, 0.345941782, 8.24376656e-08, 1, 1.57588176e-09, -0.345941782, 2.99972136e-08, -0.938255966)
+wait(30)
 Fire("Performed Teleport")
 wait(0.5)
 PETS = Lib.Save.Get().PetsEquipped
@@ -178,9 +185,53 @@ end
 wait(5)
 local EndingGems = Library.Save.Get().Diamonds
 GemsEarned = EndingGems - StartingGems
-WH()
+if not isfile("gemtotal1.txt") then writefile("gemtotal1.txt", "0") end
+TotalGemsEarned = GemsEarned + tonumber(readfile("gemtotal1.txt"))
+writefile("gemtotal1.txt", tostring(TotalGemsEarned))
+if not isfile("timetotal.txt") then
+    writefile("timetotal.txt", "0") end
+if not isfile("timeframe.txt") then
+     writefile("timeframe.txt", "0")
+     tt = tonumber(readfile("timetotal.txt"))
+     tt = tt + TimeElapsed    
+writefile("timeframe.txt", tostring(GemsEarned + tonumber(readfile("timeframe.txt"))))
+writefile("timetotal.txt", tostring(tt))   
+if tt >= Settings["Webhooks"]["Timeframe"] then
+    writefile("timetotal.txt", "0")
+    pcall(function()
+    request({
+		Url = Settings["Webhooks"]["Time Frame Webhook"],
+        Method = "POST",
+        Headers = {
+            ["Content-Type"] = "application/json"
+        },
+        Body = HttpService:JSONEncode{
+            ["content"] = "",
+            ["embeds"] = {
+			    {
+			      ["title"] = "Time Frame Stat Update (" .. Settings["Webhooks"]["Timeframe"] .. "s)",
+			      ["description"] = "Gem update",
+			      ["color"] = tonumber(0x0f0063),
+			      ["fields"] = {
+			        {
+			          ["name"] = "Stats",
+			          ["value"] = ":gem: **Earnings:** ``".. add_suffix(tonumber(readfile("timeframe.txt"))) .."``"
+			        }
+			      },
+			      ["author"] = {
+			        ["name"] = "Mystic Farmer - Stats"
+			      }
+			    }
+			  }
+			  }
+	})
+	end)
+    writefile("timeframe.txt", "0")
+end  
+pcall(WH)
 wait(1)
 writefile("HOP.txt", "a")
+
 local PlaceID = game.PlaceId
 local AllIDs = {}
 local foundAnything = ""
