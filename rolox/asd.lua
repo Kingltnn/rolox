@@ -461,7 +461,7 @@ if game.PlaceId == 6284583030 or game.PlaceId == 10321372166 or game.PlaceId == 
 	
 
 	
-	local fastPets = false
+	local fastPets = true
 	local Original_HasPower = Library.Shared.HasPower
 	Library.Shared.HasPower = function(pet, powerName) 
 		if fastPets and powerName == "Agility" then 
@@ -580,7 +580,7 @@ if game.PlaceId == 6284583030 or game.PlaceId == 10321372166 or game.PlaceId == 
 	local autoFarmTab = Window:CreateTab("Farm", "13075651575", true)
 	local stats = autoFarmTab:CreateParagraph({Title = "Hello, <b><font color=\"#2B699F\">" .. LocalPlayer.DisplayName .. "</font></b>!", Content = "Thanks for using my script! - KingLTN\nMake sure to join us at <b><font color=\"#2B699F\">discord.gg/MilkUp</font></b>"})
 	local autoFarmSection = autoFarmTab:CreateSection("Auto Farm", false, false, "7785988164")
-	local enableAutoFarm = false
+	local enableAutoFarm = true
 	autoFarmTab:CreateToggle({
 		Name = "Enable Auto-Farm",
 		Info = 'Auto Farm will automatically destroy/farm coins for you, be aware of the risks of abusing it',
@@ -592,7 +592,7 @@ if game.PlaceId == 6284583030 or game.PlaceId == 10321372166 or game.PlaceId == 
 		end
 	})
 	
-	local AutoFarm_FastMode = false
+	local AutoFarm_FastMode = true
 	autoFarmTab:CreateToggle({
 		Name = "Fast Mode (unlegit farm)",
 		Flag = "AutoFarm_FastMode", 
@@ -603,7 +603,7 @@ if game.PlaceId == 6284583030 or game.PlaceId == 10321372166 or game.PlaceId == 
 		end
 	})
 	
-	local AutoFarm_FarmSpeed = 0.3
+	local AutoFarm_FarmSpeed = 0.15
 	autoFarmTab:CreateSlider({
 	   Name = "Farm Speed",
 	   Flag = "AutoFarm_FarmSpeed",
@@ -617,7 +617,7 @@ if game.PlaceId == 6284583030 or game.PlaceId == 10321372166 or game.PlaceId == 
 	   end,
 	})
 	
-	local farmMaxDistance = 150
+	local farmMaxDistance = 300
 	autoFarmTab:CreateSlider({
 	   Name = "Farm Max Distance",
 	   Flag = "AutoFarm_MaxDistance",
