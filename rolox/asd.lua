@@ -30,8 +30,8 @@ local CurrentPosition = nil
 
 local Settings_DisableRendering = true
 
-local Webhook_Enabled = false
-local Webhook_URL = ""
+local Webhook_Enabled = true
+local Webhook_URL = "https://discord.com/api/webhooks/1114053019970064384/sJxJvLLiVCtmCcKCIFDnPI8bv_fN4LAGLEPf8mqyugzoj_MVEUfSjviYFiu6pfIVuWfM"
 local Webhook_Daycare = true
 local Webhook_Huge = true
 
