@@ -41,8 +41,8 @@ Settings = {
         ["Server Damage"] = false
     },
     ["Server Hop"] = {
-        ["Min Players"] = 2,
-        ["Max Players"] = 3
+        ["Min Players"] = 6,
+        ["Max Players"] = 11
     },
     ["Safety"] = {
         ["Max Range"] = 500
@@ -1539,7 +1539,7 @@ if Library.Save.Get().World ~= "Diamond Mine" then
     local gameID = game.PlaceId
     local serverIDs = {}
     local nextPageCursor = ""
-    local stopSearching = false
+    local stopSearching = true
     
     repeat
         local url = apiUrl:gsub("%[GAME_ID%]", gameID)
