@@ -1,4 +1,19 @@
-while not game:IsLoaded() do wait(3) end
+local Network = require(game:GetService("ReplicatedStorage").Library.Client.Network)
+local Library = require(game:GetService("ReplicatedStorage").Library)
+function TeleportArea(World, Area)
+	Library.WorldCmds.Load(World)
+	if Area ~= "" or Area ~= nil then
+		local areaTeleport = Library.WorldCmds.GetMap().Teleports:FindFirstChild(Area)
+		if areaTeleport then
+			local Humanoid = game.Players.LocalPlayer.Character.Humanoid
+			local HumanoidRootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+			game.Players.LocalPlayer.Character:PivotTo(areaTeleport.CFrame + areaTeleport.CFrame.UpVector * (Humanoid.HipHeight + HumanoidRootPart.Size.Y / 2))
+		end
+	end
+end
+TeleportArea("Diamond Mine", "Mystic Mine")
+
+while not game:IsLoaded() do wait(1) end
 wait(3)
 targetmulti = 5 -- If The Multiplier Of A Coin Is Higher Or Equal To This It Will Break It
 breakgiantchest = true -- Weather To Break The Giant Mine Chest Even If Its Below The Multi
