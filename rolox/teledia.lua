@@ -1,4 +1,4 @@
-task.wait(30)
+wait(30)
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Kingltnn/rolox/main/rolox/hopnew.lua"))()
 
