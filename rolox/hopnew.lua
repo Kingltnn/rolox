@@ -1,4 +1,4 @@
-
+repeat
 Settings = {
     ["On Screen Trackers"] = true,
     ["Performance"] = {
@@ -1731,3 +1731,4 @@ if not game:IsLoaded() then
     game.Loaded:Wait()
 end
 repeat task.wait() until not game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("__INTRO")
+until oldJob ~= game.JobId
