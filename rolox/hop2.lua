@@ -1,4 +1,4 @@
-while not game:IsLoaded() do wait(1) end
+while not game:IsLoaded() do wait(3) end
 wait(3)
 targetmulti = 5 -- If The Multiplier Of A Coin Is Higher Or Equal To This It Will Break It
 breakgiantchest = true -- Weather To Break The Giant Mine Chest Even If Its Below The Multi
