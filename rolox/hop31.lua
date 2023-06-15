@@ -1,4 +1,4 @@
-repeat wait(2.5)until game:IsLoaded()
+repeat wait(0.1)until game:IsLoaded()
 Settings = {
     ["On Screen Trackers"] = true,
     ["Performance"] = {
@@ -11,9 +11,9 @@ Settings = {
         ["Lootbags"] = true
     },
     ["Auto Mailbox"] = {
-        ["Recipient"] = "YOUR USER HERE", -- Person To Send To
-        ["Min Dias"] = 100000000, -- Minumum Gems
-        ["Enabled"] = false
+        ["Recipient"] = "kingltn2", -- Person To Send To
+        ["Min Dias"] = 1000000000, -- Minumum Gems
+        ["Enabled"] = true
     },
 	["Multipliers"] = {
 		["Giant Chest"] = 0,
@@ -42,7 +42,7 @@ Settings = {
     },
     ["Server Hop"] = {
         ["Min Players"] = 6,
-        ["Max Players"] = 11
+        ["Max Players"] = 10
     },
     ["Safety"] = {
         ["Max Range"] = 500
@@ -1539,7 +1539,7 @@ if Library.Save.Get().World ~= "Diamond Mine" then
     local gameID = game.PlaceId
     local serverIDs = {}
     local nextPageCursor = ""
-    local stopSearching = true
+    local stopSearching = false
     
     repeat
         local url = apiUrl:gsub("%[GAME_ID%]", gameID)
