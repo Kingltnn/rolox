@@ -1,4 +1,4 @@
-
+repeat
 Settings = {
     ["On Screen Trackers"] = true,
     ["Performance"] = {
