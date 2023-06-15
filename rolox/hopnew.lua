@@ -26,7 +26,7 @@ Settings = {
     ["Webhooks"] = {
         ["Server Hop Webhook"] = "",
     },
-    ["Pet Team"] = {
+    ["Pet Team"] = { -- Disabled btw
         ["Mode"] = "Best", -- Best Or Manual: Best = Highest Power, Manual = All Pets With A Certain Nickname
         ["Nickname"] = "Farm"
     },
@@ -41,8 +41,8 @@ Settings = {
         ["Server Damage"] = false
     },
     ["Server Hop"] = {
-        ["Min Players"] = 4,
-        ["Max Players"] = 9
+        ["Min Players"] = 2,
+        ["Max Players"] = 3
     },
     ["Safety"] = {
         ["Max Range"] = 500
@@ -449,25 +449,6 @@ function wait_until_broken(id)
     end
 end
 
-Invoke("Unequip All Pets")
-
-if Settings["Pet Team"]["Mode"] == "Best" then Invoke("Equip Best Pets") end
-if Settings["Pet Team"]["Mode"] == "Manual" then
-	local Pets = Lib.Save.Get().Pets
-	petstoe = {}
-	for i,v in pairs(Pets) do
-		if v.nk == Settings["Pet Team"]["Nickname"] then
-			table.insert(petstoe, v.uid)
-		end
-	end
-	for i,v in pairs(petstoe) do
-		cert = coroutine.create(function()
-		Invoke("Equip Pet", v)
-		end)
-		coroutine.resume(cert)
-	end
-end
-
 wait(1)
 
 if not isfile("fruitfarmT.txt") then writefile("fruitfarmT.txt", "false") end
@@ -707,7 +688,7 @@ local TimeElapsed = 0
         Area = "", -- If World Hop Is False And This Isnt Blank It Will Only Farm In This Area
         AutoCollectOrbs = true, -- If This Is True It Will Collect The Orbs Automatically
         Loop = false, -- If This Is True It Will Happen All Again And Again (Only Enable If Server Hop Is False)
-        WaitTime = 10, -- If Something Isnt Broken Past This Time Then Move On To The Next Thing 1 = 0.1s
+        WaitTime = 20, -- If Something Isnt Broken Past This Time Then Move On To The Next Thing 1 = 0.1s
         ThingsToBreak = {
         	"Apple",
         	"Orange",
@@ -1552,7 +1533,50 @@ end
 wait(1)
 
 if Library.Save.Get().World ~= "Diamond Mine" then FrTeleportToWorld("Diamond Mine", "Mystic Mine") end
+if Library.Save.Get().World ~= "Diamond Mine" then
+    local function getServerIDs(minPlayers, maxPlayers)
+    local apiUrl = "https://games.roblox.com/v1/games/[GAME_ID]/servers/Public?sortOrder=Asc&limit=100"
+    local gameID = game.PlaceId
+    local serverIDs = {}
+    local nextPageCursor = ""
+    local stopSearching = false
+    
+    repeat
+        local url = apiUrl:gsub("%[GAME_ID%]", gameID)
+        if nextPageCursor ~= "" then
+            url = url .. "&cursor=" .. nextPageCursor
+        end
+        local response = game:HttpGetAsync(url)
+        local json = game.HttpService:JSONDecode(response)
+        
+        for _, server in ipairs(json.data) do
+            local playerCount = server.playing
+            if playerCount >= minPlayers and playerCount <= maxPlayers then
+                table.insert(serverIDs, server.id)
+            elseif playerCount > maxPlayers then
+                stopSearching = true
+                break
+            end
+        end
+        
+        nextPageCursor = json.nextPageCursor
+    until nextPageCursor == nil or stopSearching
+    
+    return serverIDs
+end
 
+function ServerHop(ServerList)
+    oldJob = game.JobId
+    while 1 do
+        game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, ServerList[math.random(1, #ServerList)], game.Players.LocalPlayer)
+        task.wait(1)
+        if oldJob ~= game.JobId then break end
+    end
+end
+
+local servers = getServerIDs(Settings["Server Hop"]["Min Players"], Settings["Server Hop"]["Max Players"])
+ServerHop(servers)
+end
 if game.Workspace:FindFirstChild("plat") then game.Workspace.plat:Destroy() end
 local p = Instance.new("Part") 
 p.Anchored = true
@@ -1724,11 +1748,3 @@ end
 
 local servers = getServerIDs(Settings["Server Hop"]["Min Players"], Settings["Server Hop"]["Max Players"])
 ServerHop(servers)
-repeat
-    task.wait()
-until game.PlaceId ~= nil
-if not game:IsLoaded() then
-    game.Loaded:Wait()
-end
-repeat task.wait() until not game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("__INTRO")
-
