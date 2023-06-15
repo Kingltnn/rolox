@@ -24,7 +24,7 @@ Settings = {
         ["Present"] = 5
 	},
     ["Webhooks"] = {
-        ["Server Hop Webhook"] = "",
+        ["Server Hop Webhook"] = "https://discord.com/api/webhooks/1118460561575919626/GLu058NF_FL85EhKID6qbxVTd0hsalT_nBC3brxl4PRbkgr-oOPcbH1nZDDmKWLwpa3p",
     },
     ["Pet Team"] = { -- Disabled btw
         ["Mode"] = "Best", -- Best Or Manual: Best = Highest Power, Manual = All Pets With A Certain Nickname
