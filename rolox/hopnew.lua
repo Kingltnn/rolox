@@ -41,8 +41,8 @@ Settings = {
         ["Server Damage"] = false
     },
     ["Server Hop"] = {
-        ["Min Players"] = 2,
-        ["Max Players"] = 3
+        ["Min Players"] = 4,
+        ["Max Players"] = 9
     },
     ["Safety"] = {
         ["Max Range"] = 500
