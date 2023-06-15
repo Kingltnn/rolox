@@ -1724,3 +1724,10 @@ end
 
 local servers = getServerIDs(Settings["Server Hop"]["Min Players"], Settings["Server Hop"]["Max Players"])
 ServerHop(servers)
+repeat
+    task.wait()
+until game.PlaceId ~= nil
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+end
+repeat task.wait() until not game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("__INTRO")
