@@ -1575,7 +1575,7 @@ function ServerHop(ServerList)
 end
 
 local servers = getServerIDs(Settings["Server Hop"]["Min Players"], Settings["Server Hop"]["Max Players"])
-ServerHop(servers)
+
 end
 if game.Workspace:FindFirstChild("plat") then game.Workspace.plat:Destroy() end
 local p = Instance.new("Part") 
