@@ -17,7 +17,7 @@ Settings = {
     },
 	["Multipliers"] = {
 		["Giant Chest"] = 0,
-        ["Chest"] = 0,
+        ["Chest"] = 10,
         ["Small Chest"] = 0,
         ["Vault"] = 0,
         ["Safe"] = 3,
