@@ -688,7 +688,7 @@ local TimeElapsed = 0
         Area = "", -- If World Hop Is False And This Isnt Blank It Will Only Farm In This Area
         AutoCollectOrbs = true, -- If This Is True It Will Collect The Orbs Automatically
         Loop = false, -- If This Is True It Will Happen All Again And Again (Only Enable If Server Hop Is False)
-        WaitTime = 20, -- If Something Isnt Broken Past This Time Then Move On To The Next Thing 1 = 0.1s
+        WaitTime = 10, -- If Something Isnt Broken Past This Time Then Move On To The Next Thing 1 = 0.1s
         ThingsToBreak = {
         	"Apple",
         	"Orange",
