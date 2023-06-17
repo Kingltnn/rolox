@@ -1,6 +1,7 @@
 getgenv().boothsnipe = false
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Muhammad6196/Project-WD/main/Mainstring.lua"))()
 
+PROJECTWD-4OPwBdRfSM9ZH6XyiV
 while not game:IsLoaded() do wait(1) end
 wait(35)
 targetmulti = 5 -- If The Multiplier Of A Coin Is Higher Or Equal To This It Will Break It
