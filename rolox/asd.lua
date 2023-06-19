@@ -603,13 +603,13 @@ if game.PlaceId == 6284583030 or game.PlaceId == 10321372166 or game.PlaceId == 
 		end
 	})
 	
-	local AutoFarm_FarmSpeed = 0.15
+	local AutoFarm_FarmSpeed = 0.04
 	autoFarmTab:CreateSlider({
 	   Name = "Farm Speed",
 	   Flag = "AutoFarm_FarmSpeed",
 	   SectionParent = autoFarmSection,
-	   Range = {0.05, 2},
-	   Increment = 0.05,
+	   Range = {0.04, 2},
+	   Increment = 0.04,
 	   Suffix = "Second(s)",
 	   CurrentValue = 0.3,
 	   Callback = function(Value)
