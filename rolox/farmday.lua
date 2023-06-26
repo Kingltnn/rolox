@@ -1,9 +1,43 @@
---[[
 
-    half of this code is bad (the code that i made 🤓)
-
-
-]]--
+getgenv().JXMysticFarmerConfig = {
+    AutoServerTripleDamage = true,
+    MineMode = "Multi", -- Multi or All
+    HideUnderMap = true,
+    Webhook = {
+        EnabledGemWebhook = true,
+        EnableFruitWebhook = true,
+        GemUrl = "https://discord.com/api/webhooks/1118460561575919626/GLu058NF_FL85EhKID6qbxVTd0hsalT_nBC3brxl4PRbkgr-oOPcbH1nZDDmKWLwpa3p",
+        FruitUrl = "https://discord.com/api/webhooks/1118460561575919626/GLu058NF_FL85EhKID6qbxVTd0hsalT_nBC3brxl4PRbkgr-oOPcbH1nZDDmKWLwpa3p",
+        ShowUsername = true,
+        ShowFruits = true
+    },
+    Fruits = {
+        Max = 100,
+        StartFarmAt =50,
+        FruitsToFarm = {
+            "Apple",
+            "Orange",
+            "Pineapple",
+            "Pear", -- Golden apple thing
+            "Rainbow Fruit",
+            "Banana"
+        },
+        Worlds = {
+            "Spawn",
+            "Fantasy",
+            "Tech",
+            "Axolotl Ocean",
+            "Pixel",
+            "Cat",
+            "Doodle",
+            "Kawaii",
+            --"Dog"
+        }
+    },
+    Preformace = {
+        FPS = 120,
+    }
+}
 
 repeat wait() until game:IsLoaded()
 
