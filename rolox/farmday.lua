@@ -666,5 +666,5 @@ else
     Library = nil
     Network = nil
 
-    Jump(types[math.random(1,2)])
+    
 end
