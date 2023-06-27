@@ -12,8 +12,8 @@ getgenv().JXMysticFarmerConfig = {
         ShowFruits = true
     },
     Fruits = {
-        Max = 100,
-        StartFarmAt =50,
+        Max = 175,
+        StartFarmAt =150,
         FruitsToFarm = {
             "Apple",
             "Orange",
