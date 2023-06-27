@@ -24,13 +24,14 @@ getgenv().JXMysticFarmerConfig = {
         },
         Worlds = {
             "Spawn",
+		"Summer Event",
             "Tech",
             "Axolotl Ocean",
             "Pixel",
             "Cat",
             "Doodle",
             "Kawaii",
-            "Dog"
+            --"Dog"
         }
     },
     Preformace = {
