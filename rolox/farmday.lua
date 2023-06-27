@@ -401,7 +401,7 @@ if (math.ceil(Library.FruitCmds.Get(game.Players.LocalPlayer, Library.FruitCmds.
     end
 
     local FarmingTime = os.time()
-    wait(10)
+    wait(5)
 
     local Worlds = settings.Fruits.Worlds
     function GetFruits()
@@ -554,9 +554,6 @@ else
             wait(0.1)
         until not GetGiantChestInArea("Mystic Mine")
     end
-
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9043.19141, -34.3321552, 2424.63647, -0.938255966, 7.68024719e-08, 0.345941782, 8.24376656e-08, 1, 1.57588176e-09, -0.345941782, 2.99972136e-08, -0.938255966)
-    Fire("Performed Teleport")
 
     repeat
         local Chests = GetBigChestsInArea("Mystic Mine")
