@@ -540,7 +540,7 @@ else
 
     local GiantChest = GetGiantChestInArea("Mystic Mine")
     if GiantChest then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9085, -30+COffset, 2200)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9043.19141, -34.3321552, 2424.63647, -0.938255966, 7.68024719e-08, 0.345941782, 8.24376656e-08, 1, 1.57588176e-09, -0.345941782, 2.99972136e-08, -0.938255966)
         Fire("Performed Teleport")
 
         table.insert(GiantChestsBroken, GiantChest[1])
@@ -555,7 +555,7 @@ else
         until not GetGiantChestInArea("Mystic Mine")
     end
 
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9021, -30+COffset, 2506)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9043.19141, -34.3321552, 2424.63647, -0.938255966, 7.68024719e-08, 0.345941782, 8.24376656e-08, 1, 1.57588176e-09, -0.345941782, 2.99972136e-08, -0.938255966)
     Fire("Performed Teleport")
 
     repeat
