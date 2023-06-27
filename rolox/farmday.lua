@@ -112,22 +112,25 @@ function getRoot(char)
 	return rootPart
 end
 
-local pchar = game.Players.LocalPlayer.Character
-local Float = Instance.new('Part')
-Float.Name = "floatName"
-Float.Parent = pchar
-Float.Transparency = 1
-Float.Size = Vector3.new(2,0.2,1.5)
-Float.Anchored = true
-local FloatValue = -3.1
-Float.CFrame = getRoot(pchar).CFrame * CFrame.new(0,-3.1,0)
-local function FloatPadLoop()
-    if pchar:FindFirstChild("floatName") and getRoot(pchar) then
-        Float.CFrame = getRoot(pchar).CFrame * CFrame.new(0,-3.1,0)
-    else
-        FloatingFunc:Disconnect()
-    end
-end
+if game.Workspace:FindFirstChild("plat") then game.Workspace.plat:Destroy() end
+local p = Instance.new("Part") 
+p.Anchored = true
+p.Name = "plat"
+p.Position = Vector3.new(9043.19140625, -38.66098690032959, 2424.636474609375)
+p.Size = Vector3.new(100, 1, 100)
+p.Parent = game.Workspace
+local gui = Instance.new("SurfaceGui")
+gui.Parent = p
+gui.Face = Enum.NormalId.Top
+local textLabel = Instance.new("TextLabel")
+textLabel.Text = "Gem Farmer Made By henrymistert#3888 (.gg/henrymistert)"
+textLabel.Size = UDim2.new(1, 0, 1, 0)
+textLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+textLabel.TextColor3 = Color3.new(0, 0, 0)
+textLabel.FontSize = Enum.FontSize.Size14
+textLabel.Parent = gui
+textLabel.TextScaled = true
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9043.19141, -34.3321552, 2424.63647, -0.938255966, 7.68024719e-08, 0.345941782, 8.24376656e-08, 1, 1.57588176e-09, -0.345941782, 2.99972136e-08, -0.938255966)
 
 local LoadingTime = math.floor(os.time() - LoadingTime)
 Library = require(ReplicatedStorage.Library)
