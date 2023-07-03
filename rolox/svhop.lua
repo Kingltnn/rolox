@@ -1,5 +1,5 @@
 local S = {} do
-    S.Minimum_Players = 1
+    S.Minimum_Players = 10
     local Players = game:GetService("Players")
     local HttpService = game:GetService("HttpService")
     local TeleportService = game:GetService("TeleportService")
