@@ -1,4 +1,4 @@
-_G.Username = "kingltnbank"
+
 do
 	local v0 = string.char;
 	local v1 = string.byte;
