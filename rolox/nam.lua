@@ -1,7 +1,3 @@
-local HiddenPresents = getsenv(Player.PlayerScripts.Scripts.Game.Misc["Hidden Presents"])
-local ShinyRelics = getsenv(Player.PlayerScripts.Scripts.Game.Misc["Shiny Relics"])
-local Hatching = getsenv(Player.PlayerScripts.Scripts.Game:WaitForChild("Egg Opening Frontend"))
-
 local ZoneCMDS = Client.ZoneCmds
 local CalculateSpeedMultiplier = Client.PlayerPet.CalculateSpeedMultiplier
 local HatchingAnimation = Hatching.PlayEggAnimation
