@@ -1,11 +1,4 @@
-local ZoneCMDS = Client.ZoneCmds
-local CalculateSpeedMultiplier = Client.PlayerPet.CalculateSpeedMultiplier
-local HatchingAnimation = Hatching.PlayEggAnimation
-local RequestRelics = ShinyRelics.RequestRelics
-local RelicClicked = ShinyRelics.RelicClicked
-local GetActive = HiddenPresents.GetActive
-local Clicked = HiddenPresents.Clicked
------
+
 local Network = ReplicatedStorage:WaitForChild("Network")
 local Things = Workspace:WaitForChild("__THINGS")
 local Active = Things.__INSTANCE_CONTAINER:WaitForChild("Active")
