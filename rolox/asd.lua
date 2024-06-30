@@ -41,7 +41,7 @@ LocalPlayer.CharacterAdded:Connect(function(char)
 	HumanoidRootPart = Character:WaitForChild("HumanoidRootPart")
 end)
 
-if game.PlaceId == 6284583030 or game.PlaceId == 10321372166 or game.PlaceId == 7722306047 or game.PlaceId == 12610002282 then
+if game.PlaceId == 6284583030 or game.PlaceId == 10321372166 or game.PlaceId == 7722306047 or game.PlaceId == 12610002282 or game.PlaceId == 8737899170 then
 	
 	local banSuccess, banError = pcall(function() 
 		local Blunder = require(game:GetService("ReplicatedStorage"):WaitForChild("X", 10):WaitForChild("Blunder", 10):WaitForChild("BlunderList", 10))
