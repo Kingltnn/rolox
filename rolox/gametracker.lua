@@ -1,15 +1,3 @@
-local GainsOnly = false
-
-
-local ServerCheck = false
-while not ServerCheck do
-    if not game.Players.LocalPlayer.PlayerGui:FindFirstChild("__INTRO") and not game.Players.LocalPlayer.PlayerGui.Loading.Enabled then
-        ServerCheck = true
-    else
-        task.wait()
-    end
-end
-
 local Library = require(game:GetService("ReplicatedStorage").Library)
 local LibrarySave = Library.Save
 
