@@ -66,3 +66,11 @@ local currentAmount = getCurrentCurrencyAmount() or 0
 
 -- Send the initial update
 sendUpdate(currentAmount)
+-- Start a loop to update the currency every 10 minutes
+while true do
+    wait(updateDelay)
+    local newAmount = getCurrentCurrencyAmount() or 0
+    currentAmount = newAmount
+    totalTime = totalTime + (updateDelay / 60)
+    sendUpdate(currentAmount)
+end
