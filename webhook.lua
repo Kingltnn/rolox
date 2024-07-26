@@ -32,7 +32,7 @@ end
 -- Function to send an update to the webhook
 local function sendUpdate(currentAmount, totalAmount, deltaAmount, totalTime)
     local embed = {
-        ["title"] = "Currency Update",..playerId
+        ["title"] = "Currency Update"..playerId,
         ["color"] = tonumber("0x00FF00", 16), -- Green
         ["fields"] = {
             {
