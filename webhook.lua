@@ -32,27 +32,17 @@ end
 -- Function to send an update to the webhook
 local function sendUpdate(currentAmount, totalAmount, deltaAmount, totalTime)
     local embed = {
-        ["title"] = "Currency Update",
+        ["title"] = "Currency Update",..playerId
         ["color"] = tonumber("0x00FF00", 16), -- Green
         ["fields"] = {
             {
                 ["name"] = "Current "..currencyName,
                 ["value"] = formatNumber(currentAmount),
                 ["inline"] = true
-            },
-            {
-                ["name"] = "Total "..currencyName.." Earned / Total Time",
-                ["value"] = formatNumber(totalAmount).." / "..formatNumber(totalTime).." minutes",
-                ["inline"] = true
-            },
-            {
-                ["name"] = "Last 20 minutes",
-                ["value"] = formatNumber(deltaAmount),
-                ["inline"] = true
             }
         },
         ["footer"] = {
-            ["text"] = "I like Tacos Idk"
+            ["text"] = "Webhook by KingLTN"
         }
         }
         
@@ -72,21 +62,7 @@ end
 
 -- Initialize the current and total amounts
 local currentAmount = getCurrentCurrencyAmount() or 0
-local totalAmount = 0 -- Initialize to 0 instead of currentAmount
-local last10MinAmount = 0
-local totalTime = 0
+
 
 -- Send the initial update
-sendUpdate(currentAmount, totalAmount, last10MinAmount, totalTime)
-
--- Start a loop to update the currency every 10 minutes
-while true do
-    wait(updateDelay)
-    local newAmount = getCurrentCurrencyAmount() or 0
-    local deltaAmount = newAmount - currentAmount
-    totalAmount = totalAmount + deltaAmount
-    last10MinAmount = deltaAmount
-    currentAmount = newAmount
-    totalTime = totalTime + (updateDelay / 60)
-    sendUpdate(currentAmount, totalAmount, last10MinAmount, totalTime)
-end
+sendUpdate(currentAmount)
