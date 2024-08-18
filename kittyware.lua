@@ -13,7 +13,7 @@ getgenv().RngEvent = {
     Lucky_Dice_Enabled = true,
     Lucky_Dice_Config = {
         ["Fire Dice"] = {Craft = false, Use = false, Only_Use_If_Not_Active = false, Only_Use_If_Rolls_Ends_In = nil},
-        ["Lucky Dice"] = {Craft = false, Use = false, Only_Use_If_Not_Active = false, Only_Use_If_Rolls_Ends_In = nil},
+        ["Lucky Dice"] = {Craft = true, Use = false, Only_Use_If_Not_Active = false, Only_Use_If_Rolls_Ends_In = nil},
         ["Lucky Dice II"] = {Craft = true, Use = false, Only_Use_If_Not_Active = false, Only_Use_If_Rolls_Ends_In = nil},
         ["Lucky Dice III"] = {Craft = false, Use = false, Only_Use_If_Not_Active = false, Only_Use_If_Rolls_Ends_In = nil},
         ["Mega Lucky Dice"] = {Craft = true, Use = false, Only_Use_If_Not_Active = false, Only_Use_If_Rolls_Ends_In = nil},
@@ -21,7 +21,7 @@ getgenv().RngEvent = {
     },
 
     Webhook_Url = "https://discord.com/api/webhooks/1274649544230961276/CT78psRvkwcdbirrHTbGN_6R3xZIPHvLOAmMr183udSixP0OTu8w40nLXk0zI9F-dEjn",
-    Discord_UserID = "KingLTN",
+    Discord_UserID = "",
     Huge_Mail_User = "",
     Huge_Mail_Enabled = false, -- Warning: Using auto has a 1% Chance of donating to KiTTYWARE Devs
 
