@@ -6,12 +6,12 @@ getgenv().KiTTYWARE_ColorWar = {
         Inf_Pet_Speed = true,
 
         Event_Specific = {
-            Color_Gifts = {Enabled = true, Minimum_Buckets = 75},
+            Color_Gifts = {Enabled = false, Minimum_Buckets = 75},
             Clan_Points = {Enabled = false, Minimum_Buckets = 50},
             Stay_Teams = {Enabled = false, Only_Winning = true},
         },
     },
-    Hatch_Eggs = true,
+    Hatch_Eggs = false,
     Hatching_Misc = {
         discord_UserID = "",
         hugeNotif_Webhook = "https://discord.com/api/webhooks/1279722812931575851/G30w5whctavJ7ABeLBE0ZCFgxegLu-PHd9HMex-748vLqJ6tLK-QdicuAiY0Xqm8wRwo",
@@ -19,7 +19,7 @@ getgenv().KiTTYWARE_ColorWar = {
         autoMail_User = "kingltnsell",
         autoMail_Enabled = true,
     },
-    StatsGui = true,
+    StatsGui = false,
     Fps_Boost1 = true, -- world stuff invisible
     Fps_Boost2 = false, -- disable localscript 
 }
