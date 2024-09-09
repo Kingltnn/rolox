@@ -17,7 +17,7 @@ getgenv().KiTTYWARE_ColorWar = {
         autoMail_User = "kingltnsell",
         autoMail_Enabled = true,
     },
-    Farm_Minigame = true,
+    Farm_Minigame = false,
 
     StatsGui =  false,
     Fps_Boost1 = true,
