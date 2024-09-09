@@ -19,8 +19,8 @@ getgenv().KiTTYWARE_ColorWar = {
     },
     Farm_Minigame = true,
 
-    StatsGui = true,
-    Fps_Boost1 = false,
+    StatsGui =  false,
+    Fps_Boost1 = true,
     Fps_Boost2 = false,
 }
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/38e4778402a1d51414b40ab60274c5ed.lua"))()
