@@ -28,4 +28,6 @@ pcall(function()
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/38e4778402a1d51414b40ab60274c5ed.lua"))()
             end)
     task.wait(5)
-until getgenv().KiTTYWAREIsLoaded
+    a=0,
+    b = a + 1
+until b = 3
