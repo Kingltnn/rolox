@@ -29,5 +29,5 @@ loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/38e4778402a1d5
             end)
     task.wait(5)
     a=0,
-    b = a + 1
+    b = a + 1,
 until b = 3
