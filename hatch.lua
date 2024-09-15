@@ -3,9 +3,9 @@ getgenv().KiTTYWARE_ColorWar = {
     Farming_Misc = {
         Pets_Per_Breakable = 1,
         Event_Specific = {
-            Color_Gifts = {Enabled = true, Minimum_Buckets = 75},
+            Color_Gifts = {Enabled = true, Minimum_Buckets = 1},
             Clan_Points = {Enabled = false, Minimum_Buckets = 50},
-            Stay_Teams = {Enabled = true, Only_Winning = true},
+            Stay_Teams = {Enabled = false, Only_Winning = true},
             Graffiti_Gifts = {Enabled = true},
         },
     },
@@ -17,7 +17,7 @@ getgenv().KiTTYWARE_ColorWar = {
         autoMail_User = "kingltnsell",
         autoMail_Enabled = true,
     },
-    Farm_Minigame = false,
+    Farm_Minigame = true,
 
     StatsGui =  false,
     Fps_Boost1 = true,
