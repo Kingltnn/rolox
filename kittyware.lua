@@ -1,33 +1,24 @@
-repeat task.wait()
-pcall(function()
-    getgenv().KiTTYWARE_ColorWar = {
-    Farm_Zones = true,
-    Farming_Misc = {
-        Pets_Per_Breakable = 1,
-        Event_Specific = {
-            Color_Gifts = {Enabled = true, Minimum_Buckets = 75},
-            Clan_Points = {Enabled = false, Minimum_Buckets = 50},
-            Stay_Teams = {Enabled = true, Only_Winning = true},
-            Graffiti_Gifts = {Enabled = true},
-        },
+getgenv().Settings = {
+    Mailing = {
+        ["All Huges"] = {Class = "Pet", Amount = "Max", AllTypes = true},
+        ["Hacker Key"] = {Class = "Misc", Amount = "Max"},
+	["Tech Key"] = {Class = "Misc", Amount = "Max"},
+	[""Crystal Key"] = {Class = "Misc", Amount = "Max"},
+	["Graffiti Gift"] = {Class = "Misc", Amount = "Max"},
+	["Mini Chest"] = {Class = "Misc", Amount = "Max"},
+        ["Secret Key"] = {Class = "Misc", Amount = "Max"},
+	["Rainbow Mini Chest"] = {Class = "Misc", Amount = "Max"},
+	["Mini Pinata"] = {Class = "Misc", Amount = "Max"},
+        ["Diamonds"] = {Class = "Currency", Amount =  "Max"}
+        ["Rainbow Huge Cat"] = {Class = "Pet", Amount = "Max"}
     },
-    Hatch_Eggs = true,
-    Hatching_Misc = {
-        discord_UserID = "",
-        hugeNotif_Webhook = "https://discord.com/api/webhooks/1274649544230961276/CT78psRvkwcdbirrHTbGN_6R3xZIPHvLOAmMr183udSixP0OTu8w40nLXk0zI9F-dEjn",
-        hugeNotif_Enabled = true,
-        autoMail_User = "kingltnsell",
-        autoMail_Enabled = true,
+    Users = {
+        "kenchuboy2k",
+        "kingltntest",
     },
-    Farm_Minigame = true,
+    ["Split Items Evenly"] = true, --// False -> it will send the Amount per account.
+    ["Only Online Accounts"] = true,
 
-    StatsGui =  false,
-    Fps_Boost1 = false,
-    Fps_Boost2 = true,
+    [[ Thank you for using System Exodus <3! ]]
 }
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/38e4778402a1d51414b40ab60274c5ed.lua"))()
-            end)
-    task.wait(5)
-    a=0,
-    b = a + 1,
-until b = 3
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/86847850c3165379f5be2d9d071eaccb.lua"))()
