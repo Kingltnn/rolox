@@ -1,12 +1,10 @@
-if not game:IsLoaded() then  game:IsLoaded() and
+repeat
+    wait()
+until game:IsLoaded() and
     game:GetService("Players").LocalPlayer:FindFirstChild("PlayerGui") and
     game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("MainLeft") and
     game:GetService("Players").LocalPlayer.PlayerGui.MainLeft.Left.Currency.Diamonds.Diamonds.Visible == true and
-    not game:GetService("Players").LocalPlayer:FindFirstChild("GUIFX Holder") end
-local webhook = "https://discord.com/api/webhooks/1258749465737564270/RAhyqwINMqOus2JGulXItpPMw09-jAe_Hrzrg29-6MQEpBp17f15m3mO1UY3OuqAvdNZ"
-
-local updateDelay = 100
-
+    not game:GetService("Players").LocalPlayer:FindFirstChild("GUIFX Holder")
 local plr = game.Players.LocalPlayer
 local data = {
     Shard = 0,
@@ -26,58 +24,6 @@ local data = {
     Rolls = 0,
     Coins = 0
 }
-
--- Function to send an update to the webhook
-local function sendUpdate(data)
-    local embed = {
-        ["title"] = "Stat Tracker PS99 for"..playerId,
-        ["color"] = tonumber("0x00FF00", 16), -- Green
-        ["fields"] = {
-            {
-                ["name"] = "Gem💎 ",
-                ["value"] = formatNumber(data.Gem),
-                ["inline"] = true
-            },
-            {
-                ["name"] = "Rank👑 ",
-                ["value"] = formatNumber(data.rank),
-                ["inline"] = true
-            },
-            {
-                ["name"] = "Huge🟫 ",
-                ["value"] = formatNumber(data.Huge),
-                ["inline"] = true
-            },
-            {
-                ["name"] = "Rebirth👼 ",
-                ["value"] = formatNumber(data.Rebirth),
-                ["inline"] = true
-            },
-            {
-                ["name"] = "UnlockedZones🌍 ",
-                ["value"] = formatNumber(data.UnlockedZones),
-                ["inline"] = true
-            }
-        },
-        ["footer"] = {
-            ["text"] = "I am KingLTN - thanks"
-        }
-        }
-        (syn and syn.request or http_request or http.request) {
-            Url = webhook;
-            Method = 'POST';
-            Headers = {
-                ['Content-Type'] = 'application/json';
-            };
-            Body = game:GetService('HttpService'):JSONEncode({
-                username = "Stat Tracker", 
-                avatar_url = 'https://imgur.com/a/dWvyFdY',
-                embeds = {embed} 
-            })
-        }
- end
-
-
 local save = require(game:GetService("ReplicatedStorage").Library.Client.Save)
 spawn(function()
     while wait() do
@@ -192,18 +138,62 @@ spawn(function()
     end
 end)
 local old = game:GetService("Players").LocalPlayer.leaderstats["\240\159\146\142 Diamonds"].Value
-    data.GemPerMin = math.floor((game:GetService("Players").LocalPlayer.leaderstats["\240\159\146\142 Diamonds"].Value - old))
-    old = game:GetService("Players").LocalPlayer.leaderstats["\240\159\146\142 Diamonds"].Value
-    spawn(function()
-        while wait(60) do
+data.GemPerMin = math.floor((game:GetService("Players").LocalPlayer.leaderstats["\240\159\146\142 Diamonds"].Value - old))
+old = game:GetService("Players").LocalPlayer.leaderstats["\240\159\146\142 Diamonds"].Value
+spawn(function()
+    while wait(60) do
         data.GemPerMin = math.floor((game:GetService("Players").LocalPlayer.leaderstats["\240\159\146\142 Diamonds"].Value - old))
         old = game:GetService("Players").LocalPlayer.leaderstats["\240\159\146\142 Diamonds"].Value
-        end
-    end)
-    sendUpdate(data)
-    while true  do
-    wait(updateDelay)   
-    writefile(plr.Name .. "pet99.json", game:GetService('HttpService'):JSONEncode(data))
-    wait(10)
-    sendUpdate(data)
     end
+end)
+
+local HttpService = game:GetService("HttpService")
+local InputService = game:GetService('UserInputService')
+local RunService = game:GetService('RunService')
+local embed = {
+            {
+                ["color"] = 1,
+                ["fields"] = {
+                        {
+                            ["name"] = " __Gem__",
+                            ["value"] = ("• **Total Gems:** ``%s``"):format(data.Gem),
+                            ["inline"] = false
+                        },
+                        {
+                            ["name"] = "__Rank__",
+                            ["value"] = ("• **Rank:** ``%s``"):format(data.Rank),
+                            ["inline"] = false
+                        }
+                },
+                ["author"] = {
+                    ["name"] = "Mystic Farmer • Stats"
+                },
+                ["footer"] = {
+                    ["text"] = "JX Utilities • Mystic Farmer"..webhook_user,
+                    ["icon_url"] = "https://media.discordapp.net/attachments/1108132899431137300/1109902689996910622/gpfp.png?width=675&height=675"
+                },
+                ["timestamp"] = DateTime.now():ToIsoDate()
+            }
+        }
+	local AttemptWebhook, WebhookError = pcall(function()
+            (syn and syn.request or http and http.request or http_request or fluxus and fluxus.request or getgenv().request or request) {
+                Url = settings.Webhook.FruitUrl,
+                Method = "POST",
+                Headers = {
+                    ["Content-Type"] = "application/json"
+                },
+                Body = game:GetService("HttpService"):JSONEncode{
+                    ["content"] = "",
+                    ["embeds"] = embed
+                }
+            }
+        end)
+        if not AttemptWebhook then print(WebhookError) end
+    end
+
+
+
+
+while wait(5) do
+    writefile(plr.Name .. "pet99.json", game:GetService('HttpService'):JSONEncode(data))
+end
