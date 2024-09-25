@@ -46,7 +46,7 @@ local function SenWH(data)
                 ["color"] = 1,
                 ["fields"] = {                
                             ["name"] = " __Gem__",
-                            ["value"] = ("• **Total Gems:** ``%s``"):format(data.Gem),
+                            ["value"] = ("• **Total Gems:** ``%s``")..data,
                             ["inline"] = false
                      
                             },
@@ -66,5 +66,5 @@ wait(5)
 print(data)
 spawn(function()
   wait(10)
-  SenWH(p)
+ pCall
  end)
