@@ -1,3 +1,4 @@
+ print("-- PET SIM X BLUNDER --")
 local plr = game.Players.LocalPlayer
 local data = {
     Shard = 0,
