@@ -146,8 +146,6 @@ spawn(function()
 end)
 
 local HttpService = game:GetService("HttpService")
-local InputService = game:GetService('UserInputService')
-local RunService = game:GetService('RunService')
 local embed = {
             {
                 ["color"] = 1,
