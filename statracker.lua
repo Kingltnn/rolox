@@ -145,37 +145,6 @@ spawn(function()
     end
 end)
 
-local HttpService = game:GetService("HttpService")
-local embed = {
-            {
-                ["color"] = 1,
-                
-                ["author"] = {
-                    ["name"] = "Mystic Farmer • Stats"
-                },
-                ["footer"] = {
-                    ["text"] = "JX Utilities • Mystic Farmer"..webhook_user,
-                    ["icon_url"] = "https://media.discordapp.net/attachments/1108132899431137300/1109902689996910622/gpfp.png?width=675&height=675"
-                },
-                ["timestamp"] = DateTime.now():ToIsoDate()
-            }
-        }
-	local AttemptWebhook, WebhookError = pcall(function()
-            (syn and syn.request or http and http.request or http_request or fluxus and fluxus.request or getgenv().request or request) {
-                Url = "https://discord.com/api/webhooks/1288429702293491775/ZbqmI34oqbEz1B8eUd22h8aORla__pAGrp4bedofLleUB-4vtmeQks-F_V6rlpm64iY9"
-                Method = "POST",
-                Headers = {
-                    ["Content-Type"] = "application/json"
-                },
-                Body = game:GetService("HttpService"):JSONEncode{
-                    ["content"] = "",
-                    ["embeds"] = embed
-                }
-            }
-        end)
-        if not AttemptWebhook then print(WebhookError) end
-    end
-
 
 
 
