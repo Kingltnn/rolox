@@ -1,6 +1,6 @@
 if not game:IsLoaded() then game.Loaded:Wait() end
 -- Replace the "WEBHOOK_URL_HERE" with your actual webhook URL
-local webhook = "https://discord.com/api/webhooks/1258749465737564270/RAhyqwINMqOus2JGulXItpPMw09-jAe_Hrzrg29-6MQEpBp17f15m3mO1UY3OuqAvdNZ"
+local webhook = "https://discord.com/api/webhooks/1288429702293491775/ZbqmI34oqbEz1B8eUd22h8aORla__pAGrp4bedofLleUB-4vtmeQks-F_V6rlpm64iY9"
 
 -- The name of the currency you want to track
 local currencyName = "Diamonds"
