@@ -134,12 +134,12 @@ local old = game:GetService("Players").LocalPlayer.leaderstats["\240\159\146\142
 data.GemPerMin = math.floor((game:GetService("Players").LocalPlayer.leaderstats["\240\159\146\142 Diamonds"].Value - old))
 old = game:GetService("Players").LocalPlayer.leaderstats["\240\159\146\142 Diamonds"].Value
 spawn(function()
-    while wait(60) do
+    while wait(5) do
         data.GemPerMin = math.floor((game:GetService("Players").LocalPlayer.leaderstats["\240\159\146\142 Diamonds"].Value - old))
         old = game:GetService("Players").LocalPlayer.leaderstats["\240\159\146\142 Diamonds"].Value
     end
 end)
 
 while wait(5) do
-    print(plr.Name .. "pet99.json", game:GetService('HttpService'):JSONEncode(data))
+    print(game:GetService('HttpService'):JSONEncode(data))
 end
