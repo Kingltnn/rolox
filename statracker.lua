@@ -1,10 +1,8 @@
-repeat
-    wait()
-until game:IsLoaded() and
+if not game:IsLoaded() then  game:IsLoaded() and
     game:GetService("Players").LocalPlayer:FindFirstChild("PlayerGui") and
     game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("MainLeft") and
     game:GetService("Players").LocalPlayer.PlayerGui.MainLeft.Left.Currency.Diamonds.Diamonds.Visible == true and
-    not game:GetService("Players").LocalPlayer:FindFirstChild("GUIFX Holder")
+    not game:GetService("Players").LocalPlayer:FindFirstChild("GUIFX Holder") end
 local webhook = "https://discord.com/api/webhooks/1258749465737564270/RAhyqwINMqOus2JGulXItpPMw09-jAe_Hrzrg29-6MQEpBp17f15m3mO1UY3OuqAvdNZ"
 
 local updateDelay = 100
