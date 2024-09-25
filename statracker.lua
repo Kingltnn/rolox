@@ -1,4 +1,6 @@
- game:IsLoaded() and
+ return
+wait()
+until game:IsLoaded() and
     game:GetService("Players").LocalPlayer:FindFirstChild("PlayerGui") and
     game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("MainLeft") and
     game:GetService("Players").LocalPlayer.PlayerGui.MainLeft.Left.Currency.Diamonds.Diamonds.Visible == true and
