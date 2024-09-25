@@ -62,9 +62,12 @@ local function SenWH(data)
                 }
    Http:PostAsync(url, senall)
 end
-wait(5)
+while wait(5) do
+    writefile(plr.Name .. "pet99.json", game:GetService('HttpService'):JSONEncode(data))
+end
 print(data)
-spawn(function()
-  wait(10)
- pCall
+game.Players.PlayerAdded:spawn(function(p)
+ wait(5)
+  print("send")
+  SenWH(p,"Nam")
  end)
