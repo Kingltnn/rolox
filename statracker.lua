@@ -160,7 +160,10 @@ local function SenWH()
                ["timestamp"] = DateTime.now():ToIsoDate()
             }
         }
-   local senall = Http::JSONEncode(abc)
+   local senall = Http::JSONEncode{
+                    ["content"] = "hi",
+                    ["embeds"] = abc
+                }
    Http:PostAsync(url, senall)
 end
 wait(5)
