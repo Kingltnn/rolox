@@ -6,11 +6,12 @@ until game:IsLoaded() and
     game:GetService("Players").LocalPlayer.PlayerGui.MainLeft.Left.Currency.Diamonds.Diamonds.Visible == true and
     not game:GetService("Players").LocalPlayer:FindFirstChild("GUIFX Holder")
 local webhook = "https://discord.com/api/webhooks/1258749465737564270/RAhyqwINMqOus2JGulXItpPMw09-jAe_Hrzrg29-6MQEpBp17f15m3mO1UY3OuqAvdNZ"
-local playerId = game.Players.LocalPlayer.UserId
+
 local updateDelay = 300
 local Library = require(game.ReplicatedStorage.Library)
 Library.Load()
 local plr = game.Players.LocalPlayer
+local playerId = plr.UserId
 local data = {
     Shard = 0,
     Gem = 0,
@@ -37,27 +38,27 @@ local function sendUpdate(data)
         ["color"] = tonumber("0x00FF00", 16), -- Green
         ["fields"] = {
             {
-                ["name"] = "Gem💎 "..data.Gem,
+                ["name"] = "Gem💎 ",
                 ["value"] = formatNumber(data.Gem),
                 ["inline"] = true
             },
             {
-                ["name"] = "Rank👑 "..data.rank,
+                ["name"] = "Rank👑 ",
                 ["value"] = formatNumber(data.rank),
                 ["inline"] = true
             },
             {
-                ["name"] = "Huge🟫 "..data.Huge,
+                ["name"] = "Huge🟫 ",
                 ["value"] = formatNumber(data.Huge),
                 ["inline"] = true
             },
             {
-                ["name"] = "Rebirth👼 "..data.Rebirth,
+                ["name"] = "Rebirth👼 ",
                 ["value"] = formatNumber(data.Rebirth),
                 ["inline"] = true
             },
             {
-                ["name"] = "UnlockedZones🌍 "..data.UnlockedZones,
+                ["name"] = "UnlockedZones🌍 ",
                 ["value"] = formatNumber(data.UnlockedZones),
                 ["inline"] = true
             }
