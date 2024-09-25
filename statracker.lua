@@ -1,4 +1,3 @@
-
 local plr = game.Players.LocalPlayer
 local data = {
     Shard = 0,
@@ -141,6 +140,6 @@ spawn(function()
     end
 end)
 
-
-
-
+while wait(5) do
+    writefile(plr.Name .. "pet99.json", game:GetService('HttpService'):JSONEncode(data))
+end
