@@ -141,6 +141,25 @@ spawn(function()
     end
 end)
 
-while wait(5) do
-    print(game:GetService('HttpService'):JSONEncode(data))
+
+local Http = game:GetService("HttpService")
+local url = "https://discord.com/api/webhooks/1288429702293491775/ZbqmI34oqbEz1B8eUd22h8aORla__pAGrp4bedofLleUB-4vtmeQks-F_V6rlpm64iY9"
+local function SenWH(data)
+   local embed = {
+            {
+                ["color"] = 1,
+                ["fields"] = {                
+                            ["name"] = " __Gem__",
+                            ["value"] = ("• **Total Gems:** ``%s``"):format(data.Gem),
+                            ["inline"] = false
+                     
+                            },
+                ["author"] = {
+                    ["name"] = "Mystic Farmer • Stats"
+                             },
+               ["timestamp"] = DateTime.now():ToIsoDate()
+            }
+        }
+   local senall = Http::JSONEncode(embed)
+   Http:PostAsync(url, senall)
 end
