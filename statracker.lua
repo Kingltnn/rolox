@@ -7,7 +7,7 @@ until game:IsLoaded() and
     not game:GetService("Players").LocalPlayer:FindFirstChild("GUIFX Holder")
 local webhook = "https://discord.com/api/webhooks/1258749465737564270/RAhyqwINMqOus2JGulXItpPMw09-jAe_Hrzrg29-6MQEpBp17f15m3mO1UY3OuqAvdNZ"
 
-local updateDelay = 300
+local updateDelay = 100
 local Library = require(game.ReplicatedStorage.Library)
 Library.Load()
 local plr = game.Players.LocalPlayer
