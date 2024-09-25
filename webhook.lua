@@ -8,10 +8,6 @@ local currencyName = "Diamonds"
 -- The delay between updates (in seconds)
 local updateDelay = 600 -- (20 minutes = 1200)
 
--- Load the library
-local Library = require(game.ReplicatedStorage.Library)
-Library.Load()
-
 -- Function to format a number with commas
 local function formatNumber(number)
     return tostring(number):reverse():gsub("%d%d%d", "%1,"):reverse():gsub("^,", "")
