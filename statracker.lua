@@ -151,18 +151,7 @@ local RunService = game:GetService('RunService')
 local embed = {
             {
                 ["color"] = 1,
-                ["fields"] = {
-                        {
-                            ["name"] = " __Gem__",
-                            ["value"] = ("• **Total Gems:** ``%s``"):format(data.Gem),
-                            ["inline"] = false
-                        },
-                        {
-                            ["name"] = "__Rank__",
-                            ["value"] = ("• **Rank:** ``%s``"):format(data.Rank),
-                            ["inline"] = false
-                        }
-                },
+                
                 ["author"] = {
                     ["name"] = "Mystic Farmer • Stats"
                 },
