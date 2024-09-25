@@ -11,7 +11,6 @@ local updateDelay = 100
 local Library = require(game.ReplicatedStorage.Library)
 Library.Load()
 local plr = game.Players.LocalPlayer
-local playerId = plr.UserId
 local data = {
     Shard = 0,
     Gem = 0,
