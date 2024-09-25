@@ -8,9 +8,6 @@ local currencyName = "Diamonds"
 -- The delay between updates (in seconds)
 local updateDelay = 600 -- (20 minutes = 1200)
 
--- Get the player's user ID
-local playerId = game.Players.LocalPlayer.UserId
-
 -- Load the library
 local Library = require(game.ReplicatedStorage.Library)
 Library.Load()
