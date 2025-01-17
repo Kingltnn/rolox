@@ -1,6 +1,6 @@
 {
-    "name": "Katana",
-    "description": "A theme made by Vodka Martini",
+    "name": "KingLTN",
+    "description": "A theme made by KingLTN",
     "authors": [
         {
             "name": "Vodka Martini",
@@ -166,7 +166,7 @@
   
       "background": {
     "blur": 0.6,
-    "url": "https://cdn.discordapp.com/attachments/1086985889286209586/1099189661995380897/82ef73f876a5ef467a8263b694e4f0b8.jpg",
+    "url": "https://github.com/Kingltnn/rolox/blob/1ce11d1ab217e00c57c5a439a24b5fde203f70ff/bb38e7b9587643afe1289f3aacf3590.jpg",
     "alpha": 0.4
     },
     "color": "#4d4463"
