@@ -165,9 +165,8 @@
     },
   
       "background": {
-    "blur": 0.6,
-    "url": "https://github.com/Kingltnn/rolox/blob/1ce11d1ab217e00c57c5a439a24b5fde203f70ff/bb38e7b9587643afe1289f3aacf3590.jpg",
-    "alpha": 0.4
+        "blur": 0.1,
+        "url": "https://imgur.com/a/UPacPTl"
     },
     "color": "#4d4463"
 }
