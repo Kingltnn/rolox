@@ -8,7 +8,7 @@
     "SelectedHopPlayerAmount": "1",
     "SelectedCorruptedBaitX": "1",
     "ToggleAutoCorruptedBaitOnX": false,
-    "SelectedMailboxPetRarity": "500000000",
+    "SelectedMailboxPetRarity": "100000000",
     "PGSELECTEDUPGRADEGROUPSMultiDrop2": "[\"Luckier\",\"Loot Chest\",\"Root\",\"Hoverboard\",\"Mine Shaft\",\"Small Coin Piles\",\"Fishing\",\"Lucky Potion\",\"Juicer\",\"Ice Fishing\",\"Fruit\",\"Flying Gifts\",\"Egg Factory\",\"Trading\",\"Leveling\",\"Merchant\",\"Weather\"]",
     "ToggleAutoUsePotionOnRainbowDice": false,
     "ToggleAutoClaimMailbox": true,
