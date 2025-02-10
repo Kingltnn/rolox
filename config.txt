@@ -105,7 +105,7 @@
     "PGSELECTEDFISHINGMERCHANTBAITMultiDrop2": "[\"Fishing Bait 1\",\"Fishing Bait 2\",\"Fishing Bait 3\",\"Fishing Bait 4\",\"Fishing Bait 5\",\"Corrupted Huge Bait 1\",\"Frozen Bait 1\",\"Frozen Bait 2\",\"Ice Fishing Scroll 1\",\"Corrupted Fishing Rod\"]",
     "PGSELECTEDMAILBOXPOTIONMultiDrop2": "[\"Valentines God Potion 1\",\"God Potion 1\",\"Instant Luck Potion 4\"]",
     "PGSELECTEDTREASURECHESTSMultiDrop2": "[\"Legendary Mining Chest\",\"Frozen Treasure Chest\",\"Bundle O' Boosts\",\"Epic Mining Chest\",\"Basic Enchant Safe\",\"Legendary Treasure Chest\",\"Rare Treasure Chest\",\"Basic Mining Chest\",\"Rare Mining Chest\",\"Epic Treasure Chest\",\"Bundle O' Scrolls\",\"Basic Treasure Chest\"]",
-    "ToggleAutoSendEggs": false,
+    "ToggleAutoSendEggs": true,
     "SelectedMinimumEggKeep": "0",
     "ToggleAutoMailboxSelectedPets": false,
     "ToggleStopFishMiningMerchant": false,
