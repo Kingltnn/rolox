@@ -125,6 +125,6 @@
     "selectedNewConfigName": "nam",
     "PGSELECTEDUPGRADETILESMultiDrop2": "[\"Go Around\",\"Diamonds\",\"Basic Roll\",\"Bundle O Boosts\",\"Valentine Bucks\",\"Bundle O Scrolls\",\"Epic Roll\",\"Chest\",\"Legendary Roll\",\"Valentines Present\",\"Mythical Roll\",\"Egg\",\"Divine Roll\",\"Huge Pet\",\"Celestial Roll\",\"God Roll\"]"
   },
-  "name": "nam",
+  "name": "nam1",
   "tableData": []
 }
